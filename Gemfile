@@ -5,6 +5,7 @@ ruby "2.7.0"
 gem "slim-rails"
 gem "html2slim"
 gem "bootstrap"
+gem "rails-i18n"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.1"
