@@ -1,4 +1,8 @@
 class TasksController < ApplicationController
+
+  # destoryアクションを除外
+  protect_from_forgery :except => [:destroy]
+
   def index
     @tasks=Task.all
   end
