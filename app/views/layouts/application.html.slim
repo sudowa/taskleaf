@@ -9,6 +9,12 @@ html
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
   body
+    - if flash[:notice]
+      .alert.alert-info
+        = flash[:notice]
+    - if flash[:alert]
+      .alert.alert-danger
+        = flash[:alert]
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
       .navbar-brand Taskleaf
       .container
