@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  devise_for :users
 
+
+
+  
+  # root to: 'tasks#index'
   root to: 'tasks#index'
   resources :tasks
+
+  resources :device
+
 
   # get 'tasks/index'
   # get 'tasks/show'
@@ -11,4 +19,17 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+
+  # devise_for :users, :controllers => {
+  #   :registrations => 'users/registrations',
+  #   :sessions => 'users/sessions'   
+  # } 
+
+  # devise_scope :user do
+  #   get "sign_in", :to => "users/sessions#new"
+  #   get "sign_out", :to => "users/sessions#destroy" 
+  # end
+
+
 end

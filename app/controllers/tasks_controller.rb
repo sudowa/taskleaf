@@ -1,4 +1,8 @@
 class TasksController < ApplicationController
+
+  # destoryアクションを除外
+  protect_from_forgery :except => [:destroy]
+
   def index
     @tasks=Task.all
   end
@@ -25,6 +29,13 @@ class TasksController < ApplicationController
     task = Task.find(params[:id])
     task.update!(task_params)
     redirect_to tasks_url , notice:"タスク「#{task.name}」を更新しました。"
+  end
+
+  def destroy
+    task = Task.find(params[:id])
+    task.destroy
+    redirect_to tasks_url, notice: "タスク「#{task.name}」を削除しました。"
+    
   end
 
   private

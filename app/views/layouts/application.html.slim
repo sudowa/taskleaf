@@ -8,6 +8,8 @@ html
     = csp_meta_tag
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    
   body
     - if flash[:notice]
       .alert.alert-info
@@ -16,7 +18,7 @@ html
       .alert.alert-danger
         = flash[:alert]
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
-      .navbar-brand Taskleaf
+      .navbar-brand タスク管理アプリケーション
       .container
         - if flash.notice.present?
           .alert.alert-success= flash.notice
