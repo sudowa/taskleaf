@@ -4,6 +4,7 @@ class TasksController < ApplicationController
   protect_from_forgery :except => [:destroy]
 
   def index
+    
     @tasks=Task.all
   end
 

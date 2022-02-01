@@ -9,7 +9,11 @@ gem "rails-i18n"
 gem 'byebug'
 gem 'devise'
 
+gem 'jquery-rails' 
+gem 'jquery-ui-rails'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+# gem "rails", "6.0.3"
 gem "rails", "~> 7.0.1"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
