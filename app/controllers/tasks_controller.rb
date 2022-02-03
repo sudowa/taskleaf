@@ -6,6 +6,9 @@ class TasksController < ApplicationController
   def index
     
     @tasks=Task.all
+    # @q = current_user.tasks.ransack(params[:q])
+    # @tasks=@q.result(distinct: true ).page(params[:page]) 
+
   end
 
   def show
