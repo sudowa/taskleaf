@@ -6,6 +6,8 @@ class TasksController < ApplicationController
   def index
     
     @tasks=Task.all
+
+    #ページネーションしようとしたところ
     # @q = current_user.tasks.ransack(params[:q])
     # @tasks=@q.result(distinct: true ).page(params[:page]) 
 
