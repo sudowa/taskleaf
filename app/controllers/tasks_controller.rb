@@ -10,6 +10,7 @@ class TasksController < ApplicationController
     #ページネーションしようとしたところ
     # @q = current_user.tasks.ransack(params[:q])
     # @tasks=@q.result(distinct: true ).page(params[:page]) 
+    #
 
   end
 
